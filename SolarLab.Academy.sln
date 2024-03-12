@@ -3,9 +3,83 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7906D6F7-750B-49E3-B8B1-7FBF4C438E48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{E0247334-9CFA-42E1-968A-94CFBB12A0C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E4DD0167-CE1D-4282-9D05-578085EAB6E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosts", "Hosts", "{A3F914A8-6EE5-439D-8B14-27B01D70B4D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{F8994A2F-C21B-461A-9A8B-51E182FBF914}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarLab.Academy.AppServices", "Application\SolarLab.Academy.AppServices\SolarLab.Academy.AppServices.csproj", "{C2C357C6-D00E-46E7-BD8B-063E77553A36}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarLab.Academy.Contracts", "Contracts\SolarLab.Academy.Contracts\SolarLab.Academy.Contracts.csproj", "{9EC0B332-59AC-4A52-BDEF-119D641D9A80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{AAD185EA-C422-4E55-8336-D9C4AFDA58D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarLab.Academy.Domain", "Domain\SolarLab.Academy.Domain\SolarLab.Academy.Domain.csproj", "{DFFC5B4E-02F6-4BBB-AFBF-3DC83A7AA223}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarLab.Academy.Infrastructure", "Infrastructure\SolarLab.Academy.Infrastructure\SolarLab.Academy.Infrastructure.csproj", "{16353B50-4087-4970-8F31-2F32C32C6306}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarLab.Academy.DataAccess", "Infrastructure\SolarLab.Academy.DataAccess\SolarLab.Academy.DataAccess.csproj", "{E352EA6D-CD88-4DC9-84AC-12919C577FA2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarLab.Academy.ComponentRegistrar", "Infrastructure\SolarLab.Academy.ComponentRegistrar\SolarLab.Academy.ComponentRegistrar.csproj", "{C2AFE528-922D-4846-AB85-2FC3799D3723}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarLab.Academy.Api", "Hosts\SolarLab.Academy.Api\SolarLab.Academy.Api.csproj", "{FAE18E75-A25B-4B19-9929-C4C3A7ABA8E0}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2C357C6-D00E-46E7-BD8B-063E77553A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C357C6-D00E-46E7-BD8B-063E77553A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C357C6-D00E-46E7-BD8B-063E77553A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C357C6-D00E-46E7-BD8B-063E77553A36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EC0B332-59AC-4A52-BDEF-119D641D9A80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EC0B332-59AC-4A52-BDEF-119D641D9A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EC0B332-59AC-4A52-BDEF-119D641D9A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EC0B332-59AC-4A52-BDEF-119D641D9A80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFFC5B4E-02F6-4BBB-AFBF-3DC83A7AA223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFFC5B4E-02F6-4BBB-AFBF-3DC83A7AA223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFFC5B4E-02F6-4BBB-AFBF-3DC83A7AA223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFFC5B4E-02F6-4BBB-AFBF-3DC83A7AA223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16353B50-4087-4970-8F31-2F32C32C6306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16353B50-4087-4970-8F31-2F32C32C6306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16353B50-4087-4970-8F31-2F32C32C6306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16353B50-4087-4970-8F31-2F32C32C6306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E352EA6D-CD88-4DC9-84AC-12919C577FA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E352EA6D-CD88-4DC9-84AC-12919C577FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E352EA6D-CD88-4DC9-84AC-12919C577FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E352EA6D-CD88-4DC9-84AC-12919C577FA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2AFE528-922D-4846-AB85-2FC3799D3723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2AFE528-922D-4846-AB85-2FC3799D3723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2AFE528-922D-4846-AB85-2FC3799D3723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2AFE528-922D-4846-AB85-2FC3799D3723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAE18E75-A25B-4B19-9929-C4C3A7ABA8E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAE18E75-A25B-4B19-9929-C4C3A7ABA8E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAE18E75-A25B-4B19-9929-C4C3A7ABA8E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAE18E75-A25B-4B19-9929-C4C3A7ABA8E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E0247334-9CFA-42E1-968A-94CFBB12A0C5} = {7906D6F7-750B-49E3-B8B1-7FBF4C438E48}
+		{E4DD0167-CE1D-4282-9D05-578085EAB6E3} = {7906D6F7-750B-49E3-B8B1-7FBF4C438E48}
+		{A3F914A8-6EE5-439D-8B14-27B01D70B4D8} = {7906D6F7-750B-49E3-B8B1-7FBF4C438E48}
+		{F8994A2F-C21B-461A-9A8B-51E182FBF914} = {7906D6F7-750B-49E3-B8B1-7FBF4C438E48}
+		{C2C357C6-D00E-46E7-BD8B-063E77553A36} = {E0247334-9CFA-42E1-968A-94CFBB12A0C5}
+		{9EC0B332-59AC-4A52-BDEF-119D641D9A80} = {F8994A2F-C21B-461A-9A8B-51E182FBF914}
+		{AAD185EA-C422-4E55-8336-D9C4AFDA58D8} = {7906D6F7-750B-49E3-B8B1-7FBF4C438E48}
+		{DFFC5B4E-02F6-4BBB-AFBF-3DC83A7AA223} = {AAD185EA-C422-4E55-8336-D9C4AFDA58D8}
+		{16353B50-4087-4970-8F31-2F32C32C6306} = {E4DD0167-CE1D-4282-9D05-578085EAB6E3}
+		{E352EA6D-CD88-4DC9-84AC-12919C577FA2} = {E4DD0167-CE1D-4282-9D05-578085EAB6E3}
+		{C2AFE528-922D-4846-AB85-2FC3799D3723} = {E4DD0167-CE1D-4282-9D05-578085EAB6E3}
+		{FAE18E75-A25B-4B19-9929-C4C3A7ABA8E0} = {A3F914A8-6EE5-439D-8B14-27B01D70B4D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D2FB8C77-A023-42F9-8A3A-99EAD246ECF2}

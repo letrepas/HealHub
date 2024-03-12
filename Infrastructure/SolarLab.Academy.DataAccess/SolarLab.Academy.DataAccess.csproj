@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\SolarLab.Academy.AppServices\SolarLab.Academy.AppServices.csproj" />
+    <ProjectReference Include="..\..\Domain\SolarLab.Academy.Domain\SolarLab.Academy.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="User\Configurations\" />
+  </ItemGroup>
+
 </Project>
