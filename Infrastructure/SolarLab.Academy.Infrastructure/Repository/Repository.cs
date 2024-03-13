@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,18 @@ using System.Threading.Tasks;
 
 namespace SolarLab.Academy.Infrastructure.Repository
 {
-    internal class Repository<TEntity> : IRepository <TEntity> where TEntity : class
+    public class Repository<TEntity> : IRepository <TEntity> where TEntity : class
     {
+        protected DbContext DbContext { get; }
+
+        protected DbSet<TEntity> DbSet { get; }
+
+        public Repository(DbContext context)
+        {
+            DbContext = context;
+            DbSet = DbContext.Set<TEntity>();
+            
+        }
         public Task AddAsync(TEntity model)
         {
             throw new NotImplementedException();
@@ -20,7 +31,7 @@ namespace SolarLab.Academy.Infrastructure.Repository
 
         public IQueryable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return DbSet;
         }
 
         public Task<TEntity> GetByIdAsync(Guid id)
@@ -30,7 +41,8 @@ namespace SolarLab.Academy.Infrastructure.Repository
 
         public IQueryable<TEntity> GetFiltered(System.Linq.Expressions.Expression<Func<TEntity, bool>> predicate)
         {
-            throw new NotImplementedException();
+            if (predicate == null) throw new ArgumentNullException(nameof(predicate));
+            return DbSet.Where(predicate);
         }
 
         public Task UpdateAsync(TEntity model)
